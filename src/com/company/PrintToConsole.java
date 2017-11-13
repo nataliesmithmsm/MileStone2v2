@@ -21,19 +21,14 @@ public class PrintToConsole {
 
         List <PersonalDetails> carInsuranceList = new ArrayList<>();
 
-//        BasicDBObject query = new BasicDBObject();
-//
-//        query.put("firstname", "Harry");
-
         DBCursor cursor = collection.find();
 
         while (cursor.hasNext()) {
 
             BasicDBObject carInsuranceObject = (BasicDBObject) cursor.next();
 
-//            BasicDBObject carInsurance = object.get("PersonalDetails");
-
-            //convert.convertingObject(carInsuranceObject);
+            //converting Mongo Object (BSON) to java object
+            PersonalDetails personalDetails = convert.convertingObject(carInsuranceObject);
 
             String firstname = carInsuranceObject.getString("FirstName");
             String surname = carInsuranceObject.getString("Surname");
@@ -66,8 +61,10 @@ public class PrintToConsole {
             carDetails.setEngineSize(engineSize);
             person.setCarDetails(carDetails);
 
-            carInsuranceList.add(person);
-            System.out.println(person);
+//            carInsuranceList.add(person);
+//            System.out.println(person);
+            carInsuranceList.add(personalDetails);
+            System.out.println(personalDetails);
         }
 
 //        List<DBObject> carInsurance = collection.find().toArray();

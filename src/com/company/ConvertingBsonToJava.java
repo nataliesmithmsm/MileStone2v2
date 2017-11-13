@@ -4,7 +4,7 @@ import com.mongodb.BasicDBObject;
 
 public class ConvertingBsonToJava {
 
-    public PersonalDetails convertingObject(BasicDBObject carInsuranceObject, PersonalDetails personObject)
+    public PersonalDetails convertingObject(BasicDBObject carInsuranceObject)
     {
         String firstname = carInsuranceObject.getString("FirstName");
         String surname = carInsuranceObject.getString("Surname");

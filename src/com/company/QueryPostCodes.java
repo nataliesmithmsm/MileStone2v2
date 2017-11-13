@@ -5,12 +5,14 @@ import com.mongodb.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class QueryCarMake {
+public class QueryPostCodes {
 
-    public void searchForCarMake()
+    public void searchForPostcodes()
     {
+        //referance to class
         ConvertingBsonToJava convert = new ConvertingBsonToJava();
 
+        //Create Connection
         MongoClient mongo = new MongoClient("localhost", 27017); //creating a Mongo Client
 
         //get the connections
@@ -22,22 +24,22 @@ public class QueryCarMake {
 
         //Specific Query
         BasicDBObject query = new BasicDBObject();
-        query.put("CarMake", "BMW");
+        query.put("PostCode", "SK11 NUS");
 
         DBCursor cursor = collection.find(query);
 
         while (cursor.hasNext()) {
 
-
-            BasicDBObject carInsuranceObject = (BasicDBObject) cursor.next();
+            BasicDBObject Profile = (BasicDBObject) cursor.next();
 
             //converting Mongo Object (BSON) to java object
-            PersonalDetails personalDetails = convert.convertingObject(carInsuranceObject);
+            PersonalDetails personalDetails = convert.convertingObject(Profile);
 
             carInsuranceList.add(personalDetails);
             System.out.println(personalDetails);
         }
 
         System.out.println(collection.count());
+
     }
 }
