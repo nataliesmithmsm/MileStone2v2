@@ -1,36 +1,39 @@
 package com.company;
-import com.mongodb.BasicDBObject;
-import com.mongodb.DB;
-import com.mongodb.DBCollection;
-import com.mongodb.MongoClient;
+import com.mongodb.*;
+
+import java.util.List;
 
 public class FileWriter {
 
-    public void insertToDocument(){
+    public void insertDocument(List<PersonalDetails> personList){  //ArrayList personList, PersonalDetails person1
 
         MongoClient mongo = new MongoClient("localhost", 27017); //creating a Mongo Client
 
         //get the connections
         DB db = mongo.getDB("Car_Insurance_Details"); //name of database
-        DBCollection table = db.getCollection("Personal Details"); //name of table
-
+        DBCollection table = db.getCollection("Personal_Details"); //name of table
 
         //Inserting a document
         BasicDBObject documentDetail = new BasicDBObject();
 
-        documentDetail.put("First_Name", "Natalie");
-        documentDetail.put("Surname", "Smith");
-        documentDetail.put("House_Number", 35);
-        documentDetail.put("Street", "Donalds Way");
-        documentDetail.put("Town ", "Aigburth");
-        documentDetail.put("City", "Liverpool");
-        documentDetail.put("Postcode", "L17 0EN");
-        documentDetail.put("Car Registration", "MJ62 COH");
-        documentDetail.put("Car Make", "VW");
-        documentDetail.put("Car Model", "UP!");
-        documentDetail.put("Engine Size", 2.0);
+        for (PersonalDetails person : personList)  {
 
-        table.insert(documentDetail);
+            DBObject personDBObject = new BasicDBObject();
+            personDBObject.put("FirstName", person.getFirstName());
+            personDBObject.put("Surname", person.getSurname());
+            personDBObject.put("HouseNumber", person.getAddress().getHouseNumber());
+            personDBObject.put("Street", person.getAddress().getStreet());
+            personDBObject.put("Town", person.getAddress().getTown());
+            personDBObject.put("City", person.getAddress().getCity());
+            personDBObject.put("PostCode", person.getAddress().getPostcode());
+            personDBObject.put("CarRegistration", person.getCarDetails().getCarRegistration());
+            personDBObject.put("CarMake", person.getCarDetails().getCarMake());
+            personDBObject.put("CarModel", person.getCarDetails().getCarModel());
+            personDBObject.put("EngineSize", person.getCarDetails().getEngineSize());
+
+            table.insert(personDBObject);
+//            System.out.println(personDBObject);
+        }
 
     }
 

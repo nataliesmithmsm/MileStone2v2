@@ -7,6 +7,8 @@ public class CarDetails {
     private String carModel;
     private double engineSize;
 
+    public CarDetails() {}
+
     public CarDetails(String CarRegistration, String CarMake, String CarModel, double EngineSize)
     {
         setCarRegistration(CarRegistration);

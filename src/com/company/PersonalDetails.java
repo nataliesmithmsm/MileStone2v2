@@ -7,6 +7,11 @@ public class PersonalDetails {
     private Address address;
     private CarDetails carDetails;
 
+    public PersonalDetails ()
+    {
+
+    }
+
     public PersonalDetails (String FirstName, String Surname, Address address, CarDetails carDetails)
     {
         setFirstName(FirstName);

@@ -8,6 +8,8 @@ public class Address {
     private String city;
     private String postcode;
 
+    public Address() { }
+
     public Address(int houseNumber, String street, String town, String city, String postcode)
     {
         setHouseNumber(houseNumber);

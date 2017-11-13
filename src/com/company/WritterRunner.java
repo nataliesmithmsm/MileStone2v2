@@ -1,6 +1,6 @@
 package com.company;
 
-public class Main {
+public class WritterRunner {
 
     public static void main(String[] args)
     {
