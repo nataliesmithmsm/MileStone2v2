@@ -6,6 +6,7 @@ public class ConvertingBsonToJava {
 
     public PersonalDetails convertingObject(BasicDBObject carInsuranceObject)
     {
+        //Reading in Strings from mongo Collection
         String firstname = carInsuranceObject.getString("FirstName");
         String surname = carInsuranceObject.getString("Surname");
         String houseNumber = carInsuranceObject.getString("HouseNumber");  //int houseNumber = carInsuranceObject.getInt("HouseNumber"); //
@@ -18,6 +19,7 @@ public class ConvertingBsonToJava {
         String carModel = carInsuranceObject.getString("CarModel");
         double engineSize = carInsuranceObject.getDouble("EngineSize");
 
+        //Storing Strings to a java object
         PersonalDetails person = new PersonalDetails();
         person.setFirstName(firstname);
         person.setSurname(surname);

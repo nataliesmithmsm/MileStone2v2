@@ -22,9 +22,11 @@ public class FileHelper {
         try {
            bufferedReader = new BufferedReader(new FileReader(csvFile)); //opens file ready to read
 
-           List<PersonalDetails> personList = fileReader.readToArray(commaSplitter, bufferedReader); //Reading in Csv file into an array, returns a person list
+           List<PersonalDetails> ProfileList = fileReader.readToArray(commaSplitter, bufferedReader); //Reading in Csv file into an array, returns a person list
 
-           fileWriter.insertDocument(personList);  //writing File to MongoDB ONLY RUN ONCE
+           fileWriter.insertDocument(ProfileList);  //writing File to MongoDB ONLY RUN ONCE
+
+            System.out.println("Documents have been successfully written to Mongo collection!");
         }
 
         catch (Exception e) {

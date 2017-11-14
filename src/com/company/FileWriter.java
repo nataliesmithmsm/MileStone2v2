@@ -5,34 +5,32 @@ import java.util.List;
 
 public class FileWriter {
 
-    public void insertDocument(List<PersonalDetails> personList){  //ArrayList personList, PersonalDetails person1
+    public void insertDocument(List<PersonalDetails> profileList){  //ArrayList profileList, PersonalDetails person1
 
         MongoClient mongo = new MongoClient("localhost", 27017); //creating a Mongo Client
 
         //get the connections
         DB db = mongo.getDB("Car_Insurance_Details"); //name of database
-        DBCollection table = db.getCollection("Personal_Details"); //name of table
+        DBCollection collection = db.getCollection("Personal_Details"); //name of collection
 
-        //Inserting a document
-        BasicDBObject documentDetail = new BasicDBObject();
+        for (PersonalDetails profile : profileList)  {
 
-        for (PersonalDetails person : personList)  {
+            DBObject profileDBObject = new BasicDBObject();
+            profileDBObject.put("FirstName", profile.getFirstName());
+            profileDBObject.put("Surname", profile.getSurname());
 
-            DBObject personDBObject = new BasicDBObject();
-            personDBObject.put("FirstName", person.getFirstName());
-            personDBObject.put("Surname", person.getSurname());
-            personDBObject.put("HouseNumber", person.getAddress().getHouseNumber());
-            personDBObject.put("Street", person.getAddress().getStreet());
-            personDBObject.put("Town", person.getAddress().getTown());
-            personDBObject.put("City", person.getAddress().getCity());
-            personDBObject.put("PostCode", person.getAddress().getPostcode());
-            personDBObject.put("CarRegistration", person.getCarDetails().getCarRegistration());
-            personDBObject.put("CarMake", person.getCarDetails().getCarMake());
-            personDBObject.put("CarModel", person.getCarDetails().getCarModel());
-            personDBObject.put("EngineSize", person.getCarDetails().getEngineSize());
+            profileDBObject.put("HouseNumber", profile.getAddress().getHouseNumber());
+            profileDBObject.put("Street", profile.getAddress().getStreet());
+            profileDBObject.put("Town", profile.getAddress().getTown());
+            profileDBObject.put("City", profile.getAddress().getCity());
+            profileDBObject.put("PostCode", profile.getAddress().getPostcode());
 
-            table.insert(personDBObject);
-//            System.out.println(personDBObject);
+            profileDBObject.put("CarRegistration", profile.getCarDetails().getCarRegistration());
+            profileDBObject.put("CarMake", profile.getCarDetails().getCarMake());
+            profileDBObject.put("CarModel", profile.getCarDetails().getCarModel());
+            profileDBObject.put("EngineSize", profile.getCarDetails().getEngineSize());
+
+            collection.insert(profileDBObject); //inserting object into mongo table
         }
 
     }
