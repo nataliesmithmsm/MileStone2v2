@@ -1,6 +1,11 @@
-package com.company;
+package com.company.query;
 
+import com.company.ConnectionToMongo;
+import com.company.ConvertingBsonToJava;
+import com.company.dataobjects.PersonalDetails;
 import com.mongodb.*;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,14 +15,8 @@ public class QueryPostCodes {
 
     public void searchForPostcodes()
     {
-        ConvertingBsonToJava convert = new ConvertingBsonToJava(); //referance to class
-
-        //Create Connection
-        MongoClient mongo = new MongoClient("localhost", 27017); //creating a Mongo Client
-
-        //get the connections
-        DB db = mongo.getDB("Car_Insurance_Details"); //name of database
-        DBCollection collection = db.getCollection("Personal_Details"); //name of table
+        //Connection to Mongodb, database and Collection
+        MongoCollection<BasicDBObject> collection = ConnectionToMongo.connection();  //returns collection
 
         //Create List to hold objects
         List<PersonalDetails> postcodeList = new ArrayList<>();
@@ -25,18 +24,18 @@ public class QueryPostCodes {
         //QueryObject
         BasicDBObject query = new BasicDBObject();
 
-         //Query
+        //Query
         String pattern1 = ".*" + "SK11" + ".*";
         Pattern stringPattern = Pattern.compile(pattern1);
         query.put("PostCode", stringPattern);
 
-        DBCursor cursor = collection.find(query);
+        MongoCursor<BasicDBObject> cursor = collection.find(query).iterator();
 
         while (cursor.hasNext()) {
-            BasicDBObject Profile = (BasicDBObject) cursor.next();
+            BasicDBObject Profile = cursor.next();
 
             //converting Mongo Object (BSON) to java object
-            PersonalDetails personalDetails = convert.convertingObject(Profile);
+            PersonalDetails personalDetails = ConvertingBsonToJava.convertingObject(Profile);
 
             postcodeList.add(personalDetails);
             System.out.println(personalDetails);

@@ -1,10 +1,13 @@
 package com.company;
 
+import com.company.dataobjects.Address;
+import com.company.dataobjects.CarDetails;
+import com.company.dataobjects.PersonalDetails;
 import com.mongodb.BasicDBObject;
 
 public class ConvertingBsonToJava {
 
-    public PersonalDetails convertingObject(BasicDBObject carInsuranceObject)
+    public static PersonalDetails convertingObject(BasicDBObject carInsuranceObject)
     {
         //Reading in Strings from mongo Collection
         String firstname = carInsuranceObject.getString("FirstName");

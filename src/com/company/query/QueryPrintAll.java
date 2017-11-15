@@ -1,5 +1,8 @@
-package com.company;
+package com.company.query;
 
+import com.company.ConnectionToMongo;
+import com.company.ConvertingBsonToJava;
+import com.company.dataobjects.PersonalDetails;
 import com.mongodb.*;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
@@ -12,8 +15,7 @@ public class QueryPrintAll {
     public void printAllDocuments() {
 
         //connection to MongoDB Collection
-        ConnectionToMongo connectionToMongo = new ConnectionToMongo();
-        MongoCollection<BasicDBObject> collection = connectionToMongo.connection();
+        MongoCollection<BasicDBObject> collection = ConnectionToMongo.connection();
 
         //ArrayList to store documents
         List <PersonalDetails> profileList = new ArrayList<>();
@@ -23,11 +25,10 @@ public class QueryPrintAll {
 
         while (cursor.hasNext()) {
 
-            BasicDBObject profileObject = (BasicDBObject) cursor.next(); //Creating BasicDBObject
+            BasicDBObject profileObject = cursor.next(); //Creating BasicDBObject
 
             //converting Mongo Object (BSON) to java object
-            ConvertingBsonToJava convert = new ConvertingBsonToJava();
-            PersonalDetails personalDetails = convert.convertingObject(profileObject);
+            PersonalDetails personalDetails = ConvertingBsonToJava.convertingObject(profileObject);
 
             //adding java object to list
             profileList.add(personalDetails);

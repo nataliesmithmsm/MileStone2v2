@@ -1,5 +1,10 @@
-package com.company;
+package com.company.query;
+import com.company.ConnectionToMongo;
+import com.company.dataobjects.Address;
 import com.mongodb.*;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
+import com.mongodb.client.MongoDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,19 +13,18 @@ public class QueryStoreAddressSeparate {
 
    public void readInCollection()
     {
-        MongoClient mongoClient = new MongoClient("localhost", 27017);
-        DB db = mongoClient.getDB("Car_Insurance_Details");
+        //Connection to Mongo - reading in Personal_Details collection
+        MongoCollection<BasicDBObject> collection = ConnectionToMongo.connection();
 
-        DBCollection collection = db.getCollection("Personal_Details");  //reading data from this collection
-
+        //list to store addresses
         List<Address> addressList = new ArrayList<>(); //new list to store Address
 
         //Query
-        DBCursor cursor = collection.find();
+        MongoCursor<BasicDBObject> cursor = collection.find().iterator();
 
         while (cursor.hasNext())
         {
-            BasicDBObject carInsuranceObject = (BasicDBObject) cursor.next();
+            BasicDBObject carInsuranceObject = cursor.next();
 
             String houseNumber = carInsuranceObject.getString("HouseNumber");  //Reading only address Feilds from database
             String street = carInsuranceObject.getString("Street");
@@ -36,21 +40,25 @@ public class QueryStoreAddressSeparate {
             address.setCity(city);
             address.setPostcode(postcode);
 
+            //Add each item to Address List
             addressList.add(address);
             System.out.println(address);
         }
 
-        StoreToSeparateCollection(addressList, db);
+        StoreToSeparateCollection(addressList);
 
     }
 
-    public void StoreToSeparateCollection(List <Address> addressList, DB db)
+    public void StoreToSeparateCollection(List <Address> addressList)
     {
-        DBCollection AddCollection = db.getCollection("Addresses"); //writing data to new collection
+        //Creating new connection
+        MongoClient mongoClient = new MongoClient("localhost", 27017);
+        MongoDatabase db = mongoClient.getDatabase("Car_Insurance_Details");
+        MongoCollection<BasicDBObject> addCollection = db.getCollection("Addresses", BasicDBObject.class);
 
         for (Address address : addressList)  {
 
-            DBObject AddressDBObject = new BasicDBObject();
+           BasicDBObject AddressDBObject = new BasicDBObject();
 
             AddressDBObject.put("HouseNumber", address.getHouseNumber());
             AddressDBObject.put("Street", address.getStreet());
@@ -58,10 +66,7 @@ public class QueryStoreAddressSeparate {
             AddressDBObject.put("City", address.getCity());
             AddressDBObject.put("PostCode", address.getPostcode());
 
-            AddCollection.insert(AddressDBObject);
+            addCollection.insertOne(AddressDBObject);
         }
-
     }
-
-
 }

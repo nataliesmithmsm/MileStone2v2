@@ -1,30 +1,27 @@
-package com.company;
+package com.company.filehelpers;
+
+import com.company.dataobjects.PersonalDetails;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class FileHelper {
 
     private static final String commaSplitter = ",";
-    FileWriter fileWriter = new FileWriter();
-    com.company.FileReader fileReader = new com.company.FileReader();
+    MongoWriter mongoWriter = new MongoWriter();
 
-    public void readingInCsvFile()
+    public void readingInCsvFile(String csvFile)
     {
         BufferedReader bufferedReader = null;
-
-
-        String csvFile = "ReadMe copy.csv";
 
         try {
            bufferedReader = new BufferedReader(new FileReader(csvFile)); //opens file ready to read
 
-           List<PersonalDetails> ProfileList = fileReader.readToArray(commaSplitter, bufferedReader); //Reading in Csv file into an array, returns a person list
+           List<PersonalDetails> ProfileList = CsvReader.readToArray(commaSplitter, bufferedReader); //Reading in Csv file into an array, returns a person list
 
-           fileWriter.insertDocument(ProfileList);  //writing File to MongoDB ONLY RUN ONCE
+            mongoWriter.insertDocument(ProfileList);  //writing File to MongoDB, ONLY RUN ONCE
 
             System.out.println("Documents have been successfully written to Mongo collection!");
         }

@@ -1,10 +1,11 @@
-package com.company;
+package com.company.query;
 
+import com.company.ConnectionToMongo;
+import com.company.ConvertingBsonToJava;
+import com.company.dataobjects.PersonalDetails;
 import com.mongodb.BasicDBObject;
-import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
-import com.mongodb.client.MongoDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,13 +14,13 @@ public class QueryCarMake {
 
     public void searchForCarMake()
     {
-        ConnectionToMongo connectionToMongo = new ConnectionToMongo();
-        MongoCollection <BasicDBObject> collection = connectionToMongo.connection();
+        //Connection to Mongodb, database and Collection
+        MongoCollection<BasicDBObject> collection = ConnectionToMongo.connection();  //returns collection
 
-/s
+        //List to store documents
         List<PersonalDetails> carMakeList = new ArrayList<>();
 
-        //Specific Query
+        //Query
         BasicDBObject query = new BasicDBObject();
         query.put("CarMake", "BMW");
 
@@ -30,8 +31,7 @@ public class QueryCarMake {
             BasicDBObject carInsuranceObject = cursor.next();
 
             //converting Mongo Object (BSON) to java object
-            ConvertingBsonToJava convert = new ConvertingBsonToJava();
-            PersonalDetails personalDetails = convert.convertingObject(carInsuranceObject);
+            PersonalDetails personalDetails = ConvertingBsonToJava.convertingObject(carInsuranceObject);
 
             carMakeList.add(personalDetails);
             System.out.println(personalDetails);
@@ -41,12 +41,3 @@ public class QueryCarMake {
         System.out.println("There are " + carMakeList.size() + " matching profiles out of " + collection.count());
     }
 }
-
-
-//connections
-//DB db = mongo.getDB("Car_Insurance_Details"); //name of database
-//DBCollection collection = db.getCollection("Personal_Details"); //name of table
-//MongoCollection<Document> collection = db.getCollection("Personal_Details");
-
-//DBCursor cursor = collection.find(query);
-//MongoCursor <Document> cursor = collection.find(query).iterator();

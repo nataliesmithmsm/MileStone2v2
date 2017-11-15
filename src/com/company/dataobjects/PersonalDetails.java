@@ -1,4 +1,4 @@
-package com.company;
+package com.company.dataobjects;
 
 public class PersonalDetails {
 
@@ -8,9 +8,7 @@ public class PersonalDetails {
     private CarDetails carDetails;
 
     public PersonalDetails ()
-    {
-
-    }
+    { }
 
     public PersonalDetails (String FirstName, String Surname, Address address, CarDetails carDetails)
     {

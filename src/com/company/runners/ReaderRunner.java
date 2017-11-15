@@ -1,4 +1,6 @@
-package com.company;
+package com.company.runners;
+
+import com.company.query.*;
 
 public class ReaderRunner {
 
@@ -24,7 +26,7 @@ public class ReaderRunner {
         QueryDisplayLast10 queryDisplayLast10 = new QueryDisplayLast10();
         queryDisplayLast10.displayLast10Profiles();
 
-        //Storing Address in separate Collection
+//        //Storing Address in separate Collection
 //        System.out.println("------ Storing Address to a separate collection ------");
 //        QueryStoreAddressSeparate queryStoreAddressSeparate = new QueryStoreAddressSeparate();
 //        queryStoreAddressSeparate.readInCollection();

@@ -1,21 +1,22 @@
-package com.company;
+package com.company.filehelpers;
+import com.company.ConnectionToMongo;
+import com.company.dataobjects.PersonalDetails;
 import com.mongodb.*;
+import com.mongodb.client.MongoCollection;
 
 import java.util.List;
 
-public class FileWriter {
+public class MongoWriter {
 
-    public void insertDocument(List<PersonalDetails> profileList){  //ArrayList profileList, PersonalDetails person1
+    public void insertDocument(List<PersonalDetails> profileList)  {  //ArrayList profileList, PersonalDetails person1
 
-        MongoClient mongo = new MongoClient("localhost", 27017); //creating a Mongo Client
-
-        //get the connections
-        DB db = mongo.getDB("Car_Insurance_Details"); //name of database
-        DBCollection collection = db.getCollection("Personal_Details"); //name of collection
+        //Connection to Mongodb, database and Collection
+        MongoCollection<BasicDBObject> collection = ConnectionToMongo.connection();  //returns collection
 
         for (PersonalDetails profile : profileList)  {
 
-            DBObject profileDBObject = new BasicDBObject();
+            BasicDBObject profileDBObject = new BasicDBObject();
+
             profileDBObject.put("FirstName", profile.getFirstName());
             profileDBObject.put("Surname", profile.getSurname());
 
@@ -30,7 +31,9 @@ public class FileWriter {
             profileDBObject.put("CarModel", profile.getCarDetails().getCarModel());
             profileDBObject.put("EngineSize", profile.getCarDetails().getEngineSize());
 
-            collection.insert(profileDBObject); //inserting object into mongo table
+            //inserting object into Mongodb table
+            collection.insertOne(profileDBObject);
+
         }
 
     }

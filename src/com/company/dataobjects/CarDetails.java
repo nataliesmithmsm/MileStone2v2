@@ -1,4 +1,4 @@
-package com.company;
+package com.company.dataobjects;
 
 public class CarDetails {
 
@@ -38,6 +38,5 @@ public class CarDetails {
     {
         return getCarRegistration() + " " + getCarMake() + " " + getCarModel() + " " + getEngineSize();
     }
-
 
 }

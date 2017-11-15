@@ -1,16 +1,18 @@
-package com.company;
+package com.company.filehelpers;
+
+import com.company.dataobjects.Address;
+import com.company.dataobjects.CarDetails;
+import com.company.dataobjects.PersonalDetails;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FileReader
+public class CsvReader
 {
     //Reading CSV file into Array List
     public static List<PersonalDetails> readToArray(String commaSplitter, BufferedReader bufferedReader) throws IOException {
-
-        FileReader fileReader = new FileReader();
 
         List<PersonalDetails> profileList = new ArrayList<>();  //Array List to hold data
         String line = " ";
@@ -21,7 +23,7 @@ public class FileReader
 
             String[] personInfo = line.split(commaSplitter);
 
-            PersonalDetails returnedPersonBuilder = fileReader.personBuilder(personInfo); //creating person object to add to profileList
+            PersonalDetails returnedPersonBuilder = personBuilder(personInfo); //creating person object to add to profileList
 
             profileList.add(returnedPersonBuilder); //adding to person List
         }
@@ -29,7 +31,7 @@ public class FileReader
     }
 
     //Creating person Object
-    public PersonalDetails personBuilder(String [] personInfo)
+    private static PersonalDetails personBuilder(String [] personInfo)
     {
         PersonalDetails profile = null;
 
