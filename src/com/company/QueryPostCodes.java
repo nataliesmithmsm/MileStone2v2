@@ -25,12 +25,7 @@ public class QueryPostCodes {
         //QueryObject
         BasicDBObject query = new BasicDBObject();
 
-        //Query1
-//        String search = "SK11";
-//        String pattern = ".*" + (search) + ".*";
-//        query.put("PostCode", java.util.regex.Pattern.compile(pattern));
-
-        //Query2
+         //Query
         String pattern1 = ".*" + "SK11" + ".*";
         Pattern stringPattern = Pattern.compile(pattern1);
         query.put("PostCode", stringPattern);
@@ -46,6 +41,7 @@ public class QueryPostCodes {
             postcodeList.add(personalDetails);
             System.out.println(personalDetails);
         }
+
         System.out.println("");
         System.out.println("There are " + postcodeList.size() + " matching profiles out of " + collection.count());
     }

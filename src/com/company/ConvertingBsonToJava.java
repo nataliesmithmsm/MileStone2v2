@@ -9,7 +9,7 @@ public class ConvertingBsonToJava {
         //Reading in Strings from mongo Collection
         String firstname = carInsuranceObject.getString("FirstName");
         String surname = carInsuranceObject.getString("Surname");
-        String houseNumber = carInsuranceObject.getString("HouseNumber");  //int houseNumber = carInsuranceObject.getInt("HouseNumber"); //
+        String houseNumber = carInsuranceObject.getString("HouseNumber");
         String street = carInsuranceObject.getString("Street");
         String town = carInsuranceObject.getString("Town");
         String city = carInsuranceObject.getString("City");
@@ -25,7 +25,7 @@ public class ConvertingBsonToJava {
         person.setSurname(surname);
 
         Address address = new Address();
-        address.setHouseNumber(Integer.parseInt(houseNumber));  //address.setHouseNumber(houseNumber);
+        address.setHouseNumber(Integer.parseInt(houseNumber));
         address.setStreet(street);
         address.setTown(town);
         address.setCity(city);

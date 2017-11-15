@@ -1,6 +1,8 @@
 package com.company;
 
 import com.mongodb.*;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,13 +13,13 @@ public class QueryPrintAll {
 
         //connection to MongoDB Collection
         ConnectionToMongo connectionToMongo = new ConnectionToMongo();
-        DBCollection collection = connectionToMongo.connection();  //returns collection
+        MongoCollection<BasicDBObject> collection = connectionToMongo.connection();
 
         //ArrayList to store documents
         List <PersonalDetails> profileList = new ArrayList<>();
 
         //Query Find all documents in Collection
-        DBCursor cursor = collection.find();
+        MongoCursor<BasicDBObject> cursor = collection.find().iterator();  //DBCursor cursor = collection.find();
 
         while (cursor.hasNext()) {
 

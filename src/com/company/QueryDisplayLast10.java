@@ -1,6 +1,8 @@
 package com.company;
 
 import com.mongodb.*;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,12 +13,13 @@ public class QueryDisplayLast10 {
 
         //Connection to Mongodb
         ConnectionToMongo connectionToMongo = new ConnectionToMongo();
-        DBCollection collection = connectionToMongo.connection();
+        MongoCollection<BasicDBObject> collection = connectionToMongo.connection();
 
         List<PersonalDetails> display10List = new ArrayList<>(); //new list to store items
 
         //Query
-        DBCursor cursor = collection.find().sort(new BasicDBObject("$natural", -1)).limit(10); //finds all documents sorts in descending orders and displays first 10 items
+        //DBCursor cursor = collection.find().sort(new BasicDBObject("$natural", -1)).limit(10); //finds all documents sorts in descending orders and displays first 10 items
+        MongoCursor<BasicDBObject> cursor = collection.find().sort(new BasicDBObject("$natural", -1)).limit(10).iterator();
 
         //Finding matching profiles
         while (cursor.hasNext())

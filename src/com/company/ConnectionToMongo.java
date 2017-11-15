@@ -1,21 +1,31 @@
 package com.company;
 
-import com.mongodb.DB;
-import com.mongodb.DBCollection;
-import com.mongodb.MongoClient;
+import com.mongodb.*;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
 
 public class ConnectionToMongo {
 
-    public DBCollection connection()
+    public MongoCollection<BasicDBObject> connection() //  DBCollection
     {
-        MongoClient mongoClient = new MongoClient("localhost", 27017);
+        MongoClient mongo = new MongoClient("localhost", 27017); //creating connection to MongoDB
 
         //Database Connection
-        DB db = mongoClient.getDB("Car_Insurance_Details");
-
+        MongoDatabase db = mongo.getDatabase("Car_Insurance_Details");
         //Collection Connection
-        DBCollection collection = db.getCollection("Personal_Details");  //reading data from this collection
+        MongoCollection<BasicDBObject> collection = db.getCollection("Personal_Details", BasicDBObject.class);
 
-        return collection;
+      return collection;
+
+        //        MongoClient mongoClient = new MongoClient("localhost", 27017);
+//
+//
+//        DB db = mongoClient.getDB("Car_Insurance_Details");
+//
+//
+//        DBCollection collection = db.getCollection("Personal_Details");  //reading data from this collection
+//
+//        return collection;
     }
 }
