@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TestReadingToArray {
+public class TestReadingInCsv {
 
     @Test
     public void testObjectBuilder() throws Exception

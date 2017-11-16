@@ -2,29 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40d62c15-59ef-4601-883c-05857e8bc21f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_codehaus_jackson_jackson_mapper_asl_1_9_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_mockito_mockito_all_1_9_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/TestReadingToArray.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MileStone2/com/company/ConnectionToMongo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MileStone2/com/company/ConvertingBsonToJava.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/company/ConnectionToMongo.java" afterPath="$PROJECT_DIR$/src/com/company/Mongo/ConnectionToMongo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/company/ConvertingBsonToJava.java" afterPath="$PROJECT_DIR$/src/com/company/Mongo/ConvertingBsonToJava.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MileStone2/com/company/filehelpers/MongoWriter.class" afterPath="$PROJECT_DIR$/out/production/MileStone2/com/company/filehelpers/MongoWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MileStone2/com/company/query/QueryCarMake.class" afterPath="$PROJECT_DIR$/out/production/MileStone2/com/company/query/QueryCarMake.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MileStone2/com/company/query/QueryDisplayLast10.class" afterPath="$PROJECT_DIR$/out/production/MileStone2/com/company/query/QueryDisplayLast10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MileStone2/com/company/query/QueryPostCodes.class" afterPath="$PROJECT_DIR$/out/production/MileStone2/com/company/query/QueryPostCodes.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MileStone2/com/company/query/QueryPrintAll.class" afterPath="$PROJECT_DIR$/out/production/MileStone2/com/company/query/QueryPrintAll.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MileStone2/com/company/query/QueryStoreAddressSeparate.class" afterPath="$PROJECT_DIR$/out/production/MileStone2/com/company/query/QueryStoreAddressSeparate.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/company/TestReadingToArray.java" afterPath="$PROJECT_DIR$/src/com/company/TestReadingInCsv.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MileStone2/com/company/runners/ReaderRunner.class" afterPath="$PROJECT_DIR$/out/production/MileStone2/com/company/runners/ReaderRunner.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MileStone2.iml" afterPath="$PROJECT_DIR$/MileStone2.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/filehelpers/CsvReader.java" afterPath="$PROJECT_DIR$/src/com/company/filehelpers/CsvReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/filehelpers/MongoWriter.java" afterPath="$PROJECT_DIR$/src/com/company/filehelpers/MongoWriter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/query/QueryCarMake.java" afterPath="$PROJECT_DIR$/src/com/company/query/QueryCarMake.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/query/QueryDisplayLast10.java" afterPath="$PROJECT_DIR$/src/com/company/query/QueryDisplayLast10.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/query/QueryPostCodes.java" afterPath="$PROJECT_DIR$/src/com/company/query/QueryPostCodes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/query/QueryPrintAll.java" afterPath="$PROJECT_DIR$/src/com/company/query/QueryPrintAll.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/query/QueryStoreAddressSeparate.java" afterPath="$PROJECT_DIR$/src/com/company/query/QueryStoreAddressSeparate.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/runners/ReaderRunner.java" afterPath="$PROJECT_DIR$/src/com/company/runners/ReaderRunner.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -40,8 +20,8 @@
       <file leaf-file-name="QueryDisplayLast10.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/query/QueryDisplayLast10.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="66" lean-forward="false" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="66" />
+            <state relative-caret-position="358">
+              <caret line="31" column="47" lean-forward="true" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,21 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CarDetails.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/dataobjects/CarDetails.java">
+      <file leaf-file-name="QueryPrintAll.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/query/QueryPrintAll.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QueryStoreAddressSeparate.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/query/QueryStoreAddressSeparate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="793">
-              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state relative-caret-position="322">
+              <caret line="30" column="59" lean-forward="false" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestReadingToArray.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/TestReadingToArray.java">
+      <file leaf-file-name="TestReadingInCsv.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/TestReadingInCsv.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="565">
-              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="333">
+              <caret line="60" column="60" lean-forward="true" selection-start-line="60" selection-start-column="60" selection-end-line="60" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,18 +56,18 @@
       <file leaf-file-name="PersonalDetails.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/dataobjects/PersonalDetails.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="32" column="35" lean-forward="false" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="35" />
+            <state relative-caret-position="465">
+              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConnectionToMongo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Mongo/ConnectionToMongo.java">
+      <file leaf-file-name="QueryPostCodes.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/query/QueryPostCodes.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
-              <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+              <caret line="36" column="59" lean-forward="false" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,24 +75,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReaderRunner.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/runners/ReaderRunner.java">
+      <file leaf-file-name="WritterRunner.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/runners/WritterRunner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="69" lean-forward="false" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="69" />
+            <state relative-caret-position="60">
+              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MongoWriter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/filehelpers/MongoWriter.java">
+      <file leaf-file-name="FileHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/filehelpers/FileHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="23" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="151">
+              <caret line="19" column="85" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="85" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -130,9 +98,35 @@
       <file leaf-file-name="CsvReader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/filehelpers/CsvReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-              <folding />
+            <state relative-caret-position="376">
+              <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MongoWriter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/filehelpers/MongoWriter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QueryCarMake.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/query/QueryCarMake.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -194,11 +188,12 @@
         <option value="$PROJECT_DIR$/src/com/company/query/QueryCarMake.java" />
         <option value="$PROJECT_DIR$/src/com/company/query/QueryPostCodes.java" />
         <option value="$PROJECT_DIR$/src/com/company/Mongo/ConvertingBsonToJava.java" />
-        <option value="$PROJECT_DIR$/src/com/company/runners/ReaderRunner.java" />
         <option value="$PROJECT_DIR$/src/com/company/Mongo/ConnectionToMongo.java" />
         <option value="$PROJECT_DIR$/src/com/company/query/QueryStoreAddressSeparate.java" />
-        <option value="$PROJECT_DIR$/src/com/company/filehelpers/CsvReader.java" />
         <option value="$PROJECT_DIR$/src/com/company/TestReadingToArray.java" />
+        <option value="$PROJECT_DIR$/src/com/company/runners/ReaderRunner.java" />
+        <option value="$PROJECT_DIR$/src/com/company/TestReadingInCsv.java" />
+        <option value="$PROJECT_DIR$/src/com/company/filehelpers/CsvReader.java" />
       </list>
     </option>
   </component>
@@ -208,11 +203,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="7" />
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
-    <option name="width" value="1567" />
-    <option name="height" value="1110" />
+    <option name="width" value="1440" />
+    <option name="height" value="815" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -322,7 +316,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestReadingToArray.testIfValueNullValidation">
+  <component name="RunManager" selected="Application.ReaderRunner">
     <configuration name="ReaderRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -342,7 +336,7 @@
       <module name="MileStone2" />
       <envs />
     </configuration>
-    <configuration name="TestReadingToArray.testIfValueIsCorrectType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestReadingInCsv.testIfValueIsCorrectType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.company.*" />
@@ -353,7 +347,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.company" />
-      <option name="MAIN_CLASS_NAME" value="com.company.TestReadingToArray" />
+      <option name="MAIN_CLASS_NAME" value="com.company.TestReadingInCsv" />
       <option name="METHOD_NAME" value="testIfValueIsCorrectType" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
@@ -367,7 +361,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="TestReadingToArray.testIfValueNotNullValidation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestReadingInCsv.testIfValueNotNullValidation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.company.*" />
@@ -378,7 +372,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.company" />
-      <option name="MAIN_CLASS_NAME" value="com.company.TestReadingToArray" />
+      <option name="MAIN_CLASS_NAME" value="com.company.TestReadingInCsv" />
       <option name="METHOD_NAME" value="testIfValueNotNullValidation" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
@@ -392,7 +386,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="TestReadingToArray.testIfValueNullValidation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestReadingInCsv.testIfValueNullValidation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.company.*" />
@@ -403,7 +397,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.company" />
-      <option name="MAIN_CLASS_NAME" value="com.company.TestReadingToArray" />
+      <option name="MAIN_CLASS_NAME" value="com.company.TestReadingInCsv" />
       <option name="METHOD_NAME" value="testIfValueNullValidation" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
@@ -417,7 +411,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="TestReadingToArray.testObjectBuilder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestReadingInCsv.testObjectBuilder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.company.*" />
@@ -428,7 +422,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.company" />
-      <option name="MAIN_CLASS_NAME" value="com.company.TestReadingToArray" />
+      <option name="MAIN_CLASS_NAME" value="com.company.TestReadingInCsv" />
       <option name="METHOD_NAME" value="testObjectBuilder" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
@@ -459,18 +453,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.ReaderRunner" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.TestReadingToArray.testObjectBuilder" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.TestReadingToArray.testIfValueNullValidation" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.TestReadingToArray.testIfValueNotNullValidation" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TestReadingToArray.testIfValueIsCorrectType" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TestReadingInCsv.testObjectBuilder" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TestReadingInCsv.testIfValueNullValidation" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TestReadingInCsv.testIfValueNotNullValidation" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TestReadingInCsv.testIfValueIsCorrectType" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TestReadingToArray.testIfValueNullValidation" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TestReadingToArray.testIfValueIsCorrectType" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TestReadingToArray.testIfValueNotNullValidation" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TestReadingToArray.testObjectBuilder" />
-        <item index="4" class="java.lang.String" itemvalue="Application.ReaderRunner" />
+        <item index="0" class="java.lang.String" itemvalue="Application.ReaderRunner" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TestReadingInCsv.testIfValueNullValidation" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TestReadingInCsv.testIfValueIsCorrectType" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TestReadingInCsv.testIfValueNotNullValidation" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.TestReadingInCsv.testObjectBuilder" />
       </list>
     </recent_temporary>
   </component>
@@ -532,7 +526,7 @@
     <option name="totallyTimeSpent" value="55421000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="7" y="23" width="1567" height="1110" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="810" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -543,12 +537,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4653179" sideWeight="0.50214136" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20809248" sideWeight="0.49785867" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19647697" sideWeight="0.49785867" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16975112" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21458334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -610,7 +604,7 @@
         <state relative-caret-position="255">
           <caret line="20" column="60" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="60" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -670,7 +664,7 @@
         <state relative-caret-position="360">
           <caret line="26" column="2" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="26" selection-end-column="2" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -740,7 +734,7 @@
         <state relative-caret-position="450">
           <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -792,7 +786,7 @@
         <state relative-caret-position="450">
           <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -850,7 +844,7 @@
         <state relative-caret-position="30">
           <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -877,26 +871,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/dataobjects/Address.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/query/QueryStoreAddressSeparate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-219">
-          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
+        <state relative-caret-position="795">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/filehelpers/FileHelper.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Mongo/ConnectionToMongo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/query/QueryCarMake.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="28" column="34" lean-forward="false" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+        <state relative-caret-position="405">
+          <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -911,94 +899,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/query/QueryPostCodes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="59" lean-forward="false" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/runners/WritterRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/query/QueryPrintAll.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="59" lean-forward="false" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/runners/ReaderRunner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="69" lean-forward="false" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="69" />
+        <state relative-caret-position="165">
+          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Mongo/ConnectionToMongo.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/dataobjects/Address.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/query/QueryStoreAddressSeparate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="793">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/filehelpers/MongoWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="23" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/filehelpers/CsvReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/query/QueryDisplayLast10.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="66" lean-forward="false" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/dataobjects/PersonalDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="32" column="35" lean-forward="false" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="35" />
+        <state relative-caret-position="-16">
+          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1011,10 +923,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TestReadingToArray.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/dataobjects/PersonalDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="465">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/runners/WritterRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/filehelpers/FileHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="19" column="85" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/filehelpers/MongoWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/query/QueryCarMake.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/query/QueryDisplayLast10.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="31" column="47" lean-forward="true" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/query/QueryPostCodes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="36" column="59" lean-forward="false" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/query/QueryPrintAll.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="30" column="59" lean-forward="false" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/filehelpers/CsvReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TestReadingInCsv.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="60" column="60" lean-forward="true" selection-start-line="60" selection-start-column="60" selection-end-line="60" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
