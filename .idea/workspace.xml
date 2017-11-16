@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40d62c15-59ef-4601-883c-05857e8bc21f" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/company/TestReadingToArray.java" afterPath="$PROJECT_DIR$/src/com/company/TestReadingInCsv.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MileStone2/com/company/runners/ReaderRunner.class" afterPath="$PROJECT_DIR$/out/production/MileStone2/com/company/runners/ReaderRunner.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/TestReader.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MileStone2/com/company/TestReadingToArray.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MileStone2/com/company/filehelpers/CsvReader.class" afterPath="$PROJECT_DIR$/out/production/MileStone2/com/company/filehelpers/CsvReader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MileStone2/com/company/filehelpers/FileHelper.class" afterPath="$PROJECT_DIR$/out/production/MileStone2/com/company/filehelpers/FileHelper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/TestReadingInCsv.java" afterPath="$PROJECT_DIR$/src/com/company/TestReadingInCsv.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/filehelpers/CsvReader.java" afterPath="$PROJECT_DIR$/src/com/company/filehelpers/CsvReader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/runners/ReaderRunner.java" afterPath="$PROJECT_DIR$/src/com/company/runners/ReaderRunner.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -17,35 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="QueryDisplayLast10.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/query/QueryDisplayLast10.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="31" column="47" lean-forward="true" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QueryPrintAll.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/query/QueryPrintAll.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="30" column="59" lean-forward="false" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TestReadingInCsv.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/TestReadingInCsv.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="60" column="60" lean-forward="true" selection-start-line="60" selection-start-column="60" selection-end-line="60" selection-end-column="60" />
+            <state relative-caret-position="158">
+              <caret line="38" column="10" lean-forward="true" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -53,24 +33,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersonalDetails.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/dataobjects/PersonalDetails.java">
+      <file leaf-file-name="ReadMe copy.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ReadMe copy.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="30">
+              <caret line="2" column="72" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="78" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QueryPostCodes.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/query/QueryPostCodes.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="36" column="59" lean-forward="false" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -79,7 +47,17 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/runners/WritterRunner.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReaderRunner.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/runners/ReaderRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="55" lean-forward="true" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -88,8 +66,8 @@
       <file leaf-file-name="FileHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/filehelpers/FileHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="19" column="85" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="85" />
+            <state relative-caret-position="255">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -98,8 +76,8 @@
       <file leaf-file-name="CsvReader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/filehelpers/CsvReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+            <state relative-caret-position="180">
+              <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,26 +85,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MongoWriter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/filehelpers/MongoWriter.java">
+      <file leaf-file-name="MileStone2.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MileStone2.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QueryCarMake.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/query/QueryCarMake.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -184,16 +148,17 @@
         <option value="$PROJECT_DIR$/src/com/company/runners/WritterRunner.java" />
         <option value="$PROJECT_DIR$/src/com/company/FileHelper.java" />
         <option value="$PROJECT_DIR$/src/com/company/filehelpers/MongoWriter.java" />
-        <option value="$PROJECT_DIR$/src/com/company/filehelpers/FileHelper.java" />
         <option value="$PROJECT_DIR$/src/com/company/query/QueryCarMake.java" />
         <option value="$PROJECT_DIR$/src/com/company/query/QueryPostCodes.java" />
         <option value="$PROJECT_DIR$/src/com/company/Mongo/ConvertingBsonToJava.java" />
         <option value="$PROJECT_DIR$/src/com/company/Mongo/ConnectionToMongo.java" />
         <option value="$PROJECT_DIR$/src/com/company/query/QueryStoreAddressSeparate.java" />
         <option value="$PROJECT_DIR$/src/com/company/TestReadingToArray.java" />
-        <option value="$PROJECT_DIR$/src/com/company/runners/ReaderRunner.java" />
+        <option value="$PROJECT_DIR$/src/com/company/filehelpers/FileHelper.java" />
         <option value="$PROJECT_DIR$/src/com/company/TestReadingInCsv.java" />
         <option value="$PROJECT_DIR$/src/com/company/filehelpers/CsvReader.java" />
+        <option value="$PROJECT_DIR$/src/com/company/TestReader.java" />
+        <option value="$PROJECT_DIR$/src/com/company/runners/ReaderRunner.java" />
       </list>
     </option>
   </component>
@@ -203,10 +168,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="815" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="2331" />
+    <option name="y" value="24" />
+    <option name="width" value="1450" />
+    <option name="height" value="1134" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -316,25 +282,31 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ReaderRunner">
-    <configuration name="ReaderRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestReadingInCsv.testIfValueIsCorrectType">
+    <configuration name="TestReader.reading2Lines" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.company.dataobjects.*" />
+          <option name="PATTERN" value="com.company.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.company.runners.ReaderRunner" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
+      <module name="MileStone2" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="PACKAGE_NAME" value="com.company" />
+      <option name="MAIN_CLASS_NAME" value="com.company.TestReader" />
+      <option name="METHOD_NAME" value="reading2Lines" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="MileStone2" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
       <envs />
+      <patterns />
     </configuration>
     <configuration name="TestReadingInCsv.testIfValueIsCorrectType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -452,19 +424,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.ReaderRunner" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.TestReadingInCsv.testObjectBuilder" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.TestReadingInCsv.testObjectBuilder" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TestReader.reading2Lines" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.TestReadingInCsv.testIfValueNullValidation" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.TestReadingInCsv.testIfValueNotNullValidation" />
       <item index="4" class="java.lang.String" itemvalue="JUnit.TestReadingInCsv.testIfValueIsCorrectType" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.ReaderRunner" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TestReadingInCsv.testIfValueNullValidation" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TestReadingInCsv.testIfValueIsCorrectType" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TestReadingInCsv.testIfValueNotNullValidation" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.TestReadingInCsv.testObjectBuilder" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TestReadingInCsv.testIfValueIsCorrectType" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TestReadingInCsv.testIfValueNotNullValidation" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TestReadingInCsv.testIfValueNullValidation" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TestReadingInCsv.testObjectBuilder" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.TestReader.reading2Lines" />
       </list>
     </recent_temporary>
   </component>
@@ -491,63 +463,63 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestReadingToArray_testIfValueIsCorrectType - 2017.11.16 at 10h 59m 52s.xml">
-      <configuration name="TestReadingToArray.testIfValueIsCorrectType" configurationId="JUnit" />
+    <history-entry file="TestReader_reading1Line - 2017.11.16 at 16h 22m 35s.xml">
+      <configuration name="TestReader.reading1Line" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestReadingToArray_testIfValueIsCorrectType - 2017.11.16 at 11h 00m 40s.xml">
-      <configuration name="TestReadingToArray.testIfValueIsCorrectType" configurationId="JUnit" />
+    <history-entry file="TestReader_reading2Lines - 2017.11.16 at 16h 22m 40s.xml">
+      <configuration name="TestReader.reading2Lines" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestReadingToArray_testIfValueIsCorrectType - 2017.11.16 at 11h 01m 27s.xml">
-      <configuration name="TestReadingToArray.testIfValueIsCorrectType" configurationId="JUnit" />
+    <history-entry file="TestReadingInCsv_testIfValueIsCorrectType - 2017.11.16 at 16h 20m 17s.xml">
+      <configuration name="TestReadingInCsv.testIfValueIsCorrectType" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestReadingToArray_testIfValueNotNullValidation - 2017.11.16 at 10h 58m 02s.xml">
-      <configuration name="TestReadingToArray.testIfValueNotNullValidation" configurationId="JUnit" />
+    <history-entry file="TestReadingInCsv_testIfValueIsCorrectType - 2017.11.16 at 16h 23m 06s.xml">
+      <configuration name="TestReadingInCsv.testIfValueIsCorrectType" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestReadingToArray_testIfValueNotNullValidation - 2017.11.16 at 11h 00m 34s.xml">
-      <configuration name="TestReadingToArray.testIfValueNotNullValidation" configurationId="JUnit" />
+    <history-entry file="TestReadingInCsv_testIfValueNotNullValidation - 2017.11.16 at 16h 20m 10s.xml">
+      <configuration name="TestReadingInCsv.testIfValueNotNullValidation" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestReadingToArray_testIfValueNullValidation - 2017.11.16 at 10h 55m 36s.xml">
-      <configuration name="TestReadingToArray.testIfValueNullValidation" configurationId="JUnit" />
+    <history-entry file="TestReadingInCsv_testIfValueNotNullValidation - 2017.11.16 at 16h 23m 03s.xml">
+      <configuration name="TestReadingInCsv.testIfValueNotNullValidation" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestReadingToArray_testIfValueNullValidation - 2017.11.16 at 10h 56m 03s.xml">
-      <configuration name="TestReadingToArray.testIfValueNullValidation" configurationId="JUnit" />
+    <history-entry file="TestReadingInCsv_testIfValueNullValidation - 2017.11.16 at 16h 20m 07s.xml">
+      <configuration name="TestReadingInCsv.testIfValueNullValidation" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestReadingToArray_testIfValueNullValidation - 2017.11.16 at 11h 03m 32s.xml">
-      <configuration name="TestReadingToArray.testIfValueNullValidation" configurationId="JUnit" />
+    <history-entry file="TestReadingInCsv_testIfValueNullValidation - 2017.11.16 at 16h 23m 00s.xml">
+      <configuration name="TestReadingInCsv.testIfValueNullValidation" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestReadingToArray_testObjectBuilder - 2017.11.16 at 10h 48m 34s.xml">
-      <configuration name="TestReadingToArray.testObjectBuilder" configurationId="JUnit" />
+    <history-entry file="TestReadingInCsv_testObjectBuilder - 2017.11.16 at 16h 20m 31s.xml">
+      <configuration name="TestReadingInCsv.testObjectBuilder" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestReadingToArray_testObjectBuilder - 2017.11.16 at 10h 50m 10s.xml">
-      <configuration name="TestReadingToArray.testObjectBuilder" configurationId="JUnit" />
+    <history-entry file="TestReadingInCsv_testObjectBuilder - 2017.11.16 at 16h 22m 55s.xml">
+      <configuration name="TestReadingInCsv.testObjectBuilder" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="55421000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="810" extended-state="6" />
+    <frame x="2331" y="24" width="1450" height="1134" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1628131" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16195858" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4653179" sideWeight="0.50214136" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19647697" sideWeight="0.49785867" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31826743" sideWeight="0.49785867" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21458334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21310344" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34593573" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34557438" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -566,7 +538,25 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="17" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/company/TestReadingInCsv.java</url>
+          <line>42</line>
+          <properties class="com.company.TestReadingInCsv" method="testIfValueNullValidation">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/company/TestReadingInCsv.java</url>
+          <line>53</line>
+          <properties class="com.company.TestReadingInCsv" method="testIfValueNotNullValidation">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -575,50 +565,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/dataobjects/CarDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="38" lean-forward="false" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/runners/WritterRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="42" lean-forward="true" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/filehelpers/FileHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/filehelpers/CsvReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="60" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/filehelpers/MongoWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/dataobjects/PersonalDetails.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -899,22 +845,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/runners/ReaderRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/dataobjects/Address.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16">
-          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/dataobjects/CarDetails.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -928,32 +858,6 @@
         <state relative-caret-position="465">
           <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/runners/WritterRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/filehelpers/FileHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="19" column="85" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/filehelpers/MongoWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -997,20 +901,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/filehelpers/CsvReader.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/io/Reader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+        <state relative-caret-position="237">
+          <caret line="50" column="22" lean-forward="false" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/io/BufferedReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="69" column="42" lean-forward="false" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/filehelpers/MongoWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/filehelpers/FileHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReadMe copy.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="72" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MileStone2.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/runners/WritterRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/dataobjects/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TestReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/filehelpers/CsvReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/runners/ReaderRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="55" lean-forward="true" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/TestReadingInCsv.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="60" column="60" lean-forward="true" selection-start-line="60" selection-start-column="60" selection-end-line="60" selection-end-column="60" />
+        <state relative-caret-position="158">
+          <caret line="38" column="10" lean-forward="true" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -11,16 +11,14 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TestReadingInCsv {
 
     @Test
-    public void testObjectBuilder() throws Exception
-    {
+    public void testObjectBuilder() throws Exception {
         Address a1 = new Address(2, "Street", "Town", "City", "Postcode");
         CarDetails c1 = new CarDetails("Registration", "Make", "Model", 2.0);
         PersonalDetails testPerson = new PersonalDetails("Name", "Surname", a1, c1);
 
-        String [] testPersonInfo = {"Name", "Surname", "2" , "Street", "Town", "City", "Postcode", "Registration", "Make", "Model", "2.0"};
+        String[] testPersonInfo = {"Name", "Surname", "2", "Street", "Town", "City", "Postcode", "Registration", "Make", "Model", "2.0"};
 
-        CsvReader csvReader = new CsvReader();
-        PersonalDetails personalDetails = csvReader.personBuilder(testPersonInfo);
+        PersonalDetails personalDetails = CsvReader.personBuilder(testPersonInfo);
 
 
         assertAll("PersonalDetails Object should match",
@@ -38,16 +36,16 @@ public class TestReadingInCsv {
                 () -> assertEquals(personalDetails.getCarDetails().getCarModel(), testPerson.getCarDetails().getCarModel()),
                 () -> assertEquals(personalDetails.getCarDetails().getEngineSize(), testPerson.getCarDetails().getEngineSize())
 
-                );
+        );
     }
 
     @Test
     public void testIfValueNullValidation() //missing engine size, only 10 items in String Array
     {
-        CsvReader csvReader = new CsvReader();
-        String [] testPersonInfo = {"Name", "Surname", "2" , "Street ", "Town ", "City", "Postcode", "Registration", "Make", "Model"};
 
-        PersonalDetails personalDetails = csvReader.personBuilder(testPersonInfo);
+        String[] testPersonInfo = {"Name", "Surname", "2", "Street ", "Town ", "City", "Postcode", "Registration", "Make", "Model"};
+
+        PersonalDetails personalDetails = CsvReader.personBuilder(testPersonInfo);
 
         assertNull(personalDetails);
     }
@@ -55,10 +53,10 @@ public class TestReadingInCsv {
     @Test
     public void testIfValueNotNullValidation() //all fields are filed in
     {
-        CsvReader csvReader = new CsvReader();
-        String [] testPersonInfo = {"Name", "Surname", "2" , "Street ", "Town ", "City", "Postcode", "Registration", "Make", "Model", "2.0"};
 
-        PersonalDetails personalDetails = csvReader.personBuilder(testPersonInfo);
+        String[] testPersonInfo = {"Name", "Surname", "2", "Street ", "Town ", "City", "Postcode", "Registration", "Make", "Model", "2.0"};
+
+        PersonalDetails personalDetails = CsvReader.personBuilder(testPersonInfo);
 
         assertNotNull(personalDetails);
     }
@@ -66,14 +64,12 @@ public class TestReadingInCsv {
     @Test
     public void testIfValueIsCorrectType() throws Exception  //Should Fail all Strings No int/double
     {
-        CsvReader csvReader = new CsvReader();
-        String[] testPersonInfo = {"Name", "Surname", "Test" , "Street", "Town", "City", "Postcode", "Registration", "Make", "Model", "Test"};
+        String[] testPersonInfo = {"Name", "Surname", "Test", "Street", "Town", "City", "Postcode", "Registration", "Make", "Model", "Test"};
 
-        PersonalDetails personalDetails = csvReader.personBuilder(testPersonInfo);
+        PersonalDetails personalDetails = CsvReader.personBuilder(testPersonInfo);
 
         assertNull(personalDetails);
     }
-
 
 
 }

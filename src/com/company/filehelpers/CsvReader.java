@@ -6,20 +6,21 @@ import com.company.dataobjects.PersonalDetails;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CsvReader
-{
+public class CsvReader {
     //Reading CSV file into Array List
-    public static List<PersonalDetails> readToArray(String commaSplitter, BufferedReader bufferedReader) throws IOException {
+    public static List<PersonalDetails> readToArray(String commaSplitter, Reader bufferedReader) throws IOException {
 
         List<PersonalDetails> profileList = new ArrayList<>();  //Array List to hold data
         String line = " ";
 
-        bufferedReader.readLine(); //To skip first line of csv file
+        BufferedReader reader = new BufferedReader(bufferedReader);
+        reader.readLine(); //To skip first line of csv file
 
-        while ((line = bufferedReader.readLine()) != null) {
+        while ((line = reader.readLine()) != null) {
 
             String[] personInfo = line.split(commaSplitter);
 
@@ -31,8 +32,7 @@ public class CsvReader
     }
 
     //Creating person Object
-    public static PersonalDetails personBuilder(String [] personInfo)
-    {
+    public static PersonalDetails personBuilder(String[] personInfo) {
         PersonalDetails profile = null;
 
         if (personInfo.length == 11) {
