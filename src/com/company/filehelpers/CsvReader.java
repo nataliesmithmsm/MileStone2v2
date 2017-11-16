@@ -31,7 +31,7 @@ public class CsvReader
     }
 
     //Creating person Object
-    private static PersonalDetails personBuilder(String [] personInfo)
+    public static PersonalDetails personBuilder(String [] personInfo)
     {
         PersonalDetails profile = null;
 

@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Mongo;
 
 import com.mongodb.BasicDBObject;
 import com.mongodb.MongoClient;
@@ -19,6 +19,22 @@ public class ConnectionToMongo {
         MongoCollection<BasicDBObject> collection = db.getCollection("Personal_Details", BasicDBObject.class);
 
        return collection;
+
+    }
+
+
+    public static MongoCollection<BasicDBObject> connectionToAddress()
+    {
+        //Connection to Mongodb
+        MongoClient mongo = new MongoClient("localhost", 27017);
+
+        //Database Connection
+        MongoDatabase db = mongo.getDatabase("Car_Insurance_Details");
+
+        //Collection Connection
+        MongoCollection<BasicDBObject> addressCollection = db.getCollection("Address", BasicDBObject.class);
+
+        return  addressCollection;
 
     }
 }

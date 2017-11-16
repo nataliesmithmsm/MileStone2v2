@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Mongo;
 
 import com.company.dataobjects.Address;
 import com.company.dataobjects.CarDetails;

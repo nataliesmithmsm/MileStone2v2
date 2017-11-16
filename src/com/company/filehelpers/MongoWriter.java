@@ -1,5 +1,5 @@
 package com.company.filehelpers;
-import com.company.ConnectionToMongo;
+import com.company.Mongo.ConnectionToMongo;
 import com.company.dataobjects.PersonalDetails;
 import com.mongodb.*;
 import com.mongodb.client.MongoCollection;

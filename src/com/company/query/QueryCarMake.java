@@ -1,7 +1,7 @@
 package com.company.query;
 
-import com.company.ConnectionToMongo;
-import com.company.ConvertingBsonToJava;
+import com.company.Mongo.ConnectionToMongo;
+import com.company.Mongo.ConvertingBsonToJava;
 import com.company.dataobjects.PersonalDetails;
 import com.mongodb.BasicDBObject;
 import com.mongodb.client.MongoCollection;

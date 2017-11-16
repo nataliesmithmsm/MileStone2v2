@@ -1,5 +1,5 @@
 package com.company.query;
-import com.company.ConnectionToMongo;
+import com.company.Mongo.ConnectionToMongo;
 import com.company.dataobjects.Address;
 import com.mongodb.*;
 import com.mongodb.client.MongoCollection;
@@ -44,17 +44,13 @@ public class QueryStoreAddressSeparate {
             addressList.add(address);
             System.out.println(address);
         }
-
         StoreToSeparateCollection(addressList);
-
     }
 
     public void StoreToSeparateCollection(List <Address> addressList)
     {
-        //Creating new connection
-        MongoClient mongoClient = new MongoClient("localhost", 27017);
-        MongoDatabase db = mongoClient.getDatabase("Car_Insurance_Details");
-        MongoCollection<BasicDBObject> addCollection = db.getCollection("Addresses", BasicDBObject.class);
+        //Creating new connection to Address collection
+        MongoCollection<BasicDBObject> addressCollection = ConnectionToMongo.connectionToAddress();
 
         for (Address address : addressList)  {
 
@@ -66,7 +62,7 @@ public class QueryStoreAddressSeparate {
             AddressDBObject.put("City", address.getCity());
             AddressDBObject.put("PostCode", address.getPostcode());
 
-            addCollection.insertOne(AddressDBObject);
+            addressCollection.insertOne(AddressDBObject);
         }
     }
 }
