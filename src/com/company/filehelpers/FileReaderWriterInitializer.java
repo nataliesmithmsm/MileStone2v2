@@ -7,23 +7,22 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 
-public class FileHelper {
+public class FileReaderWriterInitializer {
 
-    private static final String commaSplitter = ",";
     MongoWriter mongoWriter = new MongoWriter();
 
-    public void readingInCsvFile(String csvFile)
+    public void readCsvFileAndWriteMongo(String csvFile)
     {
         BufferedReader bufferedReader = null;
 
         try {
            bufferedReader = new BufferedReader(new FileReader(csvFile)); //opens file ready to read
 
-           List<PersonalDetails> ProfileList = CsvReader.readToArray(commaSplitter, bufferedReader); //Reading in Csv file into an array, returns a person list
+           List<PersonalDetails> ProfileList = CsvReadToList.readCsvToArray(bufferedReader); //Reading in Csv file into an array, returns a person list
 
-            mongoWriter.insertDocument(ProfileList);  //writing File to MongoDB, ONLY RUN ONCE
+            mongoWriter.insertDocumentToMongo(ProfileList);  //writing File to MongoDB, ONLY RUN ONCE
 
-            System.out.println("Documents have been successfully written to Mongo collection!");
+            System.out.println("Documents have been successfully written to Mongodb collection!");
         }
 
         catch (Exception e) {

@@ -12,7 +12,7 @@ import java.util.List;
 public class QueryStoreAddressSeparate {
 
    public void readInCollection()
-    {
+   {
         //Connection to Mongo - reading in Personal_Details collection
         MongoCollection<BasicDBObject> collection = ConnectionToMongo.connection();
 

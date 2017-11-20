@@ -1,7 +1,7 @@
 package com.company;
 
 import com.company.dataobjects.PersonalDetails;
-import com.company.filehelpers.CsvReader;
+import com.company.filehelpers.CsvReadToList;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -16,10 +16,10 @@ public class TestReader{
     public void reading1Line() throws IOException {
         String splitCharacterBy = ",";
 
-        StringReader oneItem = new StringReader("Name,FirstName,House Numbe,Street,Town,City,Postcode,Registration,Make,Model,Engine Size\n" +
+        StringReader oneItem = new StringReader("Name,FirstName,House Number,Street,Town,City,Postcode,Registration,Make,Model,Engine Size\n" +
                 "Harry,Smith,32,Ullet Rd,Aigburth,Liverpool,l17 0EN,,VW,UP,1.6");
 
-        List<PersonalDetails> personalDetails = CsvReader.readToArray(splitCharacterBy, oneItem);
+        List<PersonalDetails> personalDetails = CsvReadToList.readCsvToArray(splitCharacterBy, oneItem);
         PersonalDetails personalDetail = personalDetails.get(0);
 
 
@@ -47,7 +47,7 @@ public class TestReader{
                 "Harry,Smith,32,Ullet Rd,Aigburth,Liverpool,l17 0EN,,VW,UP,1.6\n"
                 + "Mollie,Wilcox,29,Pangbourne,Appleton,Warington,WA4 THY,DG15 UJS,Citroen,,1.2");
 
-        List<PersonalDetails> personalDetails = CsvReader.readToArray(splitCharacterBy, twoItem);
+        List<PersonalDetails> personalDetails = CsvReadToList.readCsvToArray(splitCharacterBy, twoItem);
         PersonalDetails personalDetail = personalDetails.get(0);
 
         //First Line

@@ -43,5 +43,6 @@ public class QueryPostCodes {
 
         System.out.println("");
         System.out.println("There are " + postcodeList.size() + " matching profiles out of " + collection.count());
+        System.out.println("");
     }
 }

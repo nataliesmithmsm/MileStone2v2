@@ -3,7 +3,7 @@ package com.company;
 import com.company.dataobjects.Address;
 import com.company.dataobjects.CarDetails;
 import com.company.dataobjects.PersonalDetails;
-import com.company.filehelpers.CsvReader;
+import com.company.filehelpers.CsvReadToList;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -18,7 +18,7 @@ public class TestReadingInCsv {
 
         String[] testPersonInfo = {"Name", "Surname", "2", "Street", "Town", "City", "Postcode", "Registration", "Make", "Model", "2.0"};
 
-        PersonalDetails personalDetails = CsvReader.personBuilder(testPersonInfo);
+        PersonalDetails personalDetails = CsvReadToList.StringArrayToProfileObject(testPersonInfo);
 
 
         assertAll("PersonalDetails Object should match",
@@ -45,7 +45,7 @@ public class TestReadingInCsv {
 
         String[] testPersonInfo = {"Name", "Surname", "2", "Street ", "Town ", "City", "Postcode", "Registration", "Make", "Model"};
 
-        PersonalDetails personalDetails = CsvReader.personBuilder(testPersonInfo);
+        PersonalDetails personalDetails = CsvReadToList.StringArrayToProfileObject(testPersonInfo);
 
         assertNull(personalDetails);
     }
@@ -56,7 +56,7 @@ public class TestReadingInCsv {
 
         String[] testPersonInfo = {"Name", "Surname", "2", "Street ", "Town ", "City", "Postcode", "Registration", "Make", "Model", "2.0"};
 
-        PersonalDetails personalDetails = CsvReader.personBuilder(testPersonInfo);
+        PersonalDetails personalDetails = CsvReadToList.StringArrayToProfileObject(testPersonInfo);
 
         assertNotNull(personalDetails);
     }
@@ -66,7 +66,7 @@ public class TestReadingInCsv {
     {
         String[] testPersonInfo = {"Name", "Surname", "Test", "Street", "Town", "City", "Postcode", "Registration", "Make", "Model", "Test"};
 
-        PersonalDetails personalDetails = CsvReader.personBuilder(testPersonInfo);
+        PersonalDetails personalDetails = CsvReadToList.StringArrayToProfileObject(testPersonInfo);
 
         assertNull(personalDetails);
     }

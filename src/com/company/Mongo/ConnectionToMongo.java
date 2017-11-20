@@ -19,7 +19,6 @@ public class ConnectionToMongo {
         MongoCollection<BasicDBObject> collection = db.getCollection("Personal_Details", BasicDBObject.class);
 
        return collection;
-
     }
 
 
@@ -35,6 +34,5 @@ public class ConnectionToMongo {
         MongoCollection<BasicDBObject> addressCollection = db.getCollection("Address", BasicDBObject.class);
 
         return  addressCollection;
-
     }
 }

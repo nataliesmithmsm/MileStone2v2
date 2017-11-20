@@ -4,8 +4,7 @@ import com.company.query.*;
 
 public class ReaderRunner {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         //Print out all documents
         System.out.println("------ All Profiles ------");
         QueryPrintAll queryPrintAll = new QueryPrintAll();
@@ -30,7 +29,6 @@ public class ReaderRunner {
         System.out.println("------ Storing Address to a separate collection ------");
         QueryStoreAddressSeparate queryStoreAddressSeparate = new QueryStoreAddressSeparate();
         queryStoreAddressSeparate.readInCollection();
-
     }
 }
 

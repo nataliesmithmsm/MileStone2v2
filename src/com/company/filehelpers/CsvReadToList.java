@@ -10,10 +10,12 @@ import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CsvReader {
-    //Reading CSV file into Array List
-    public static List<PersonalDetails> readToArray(String commaSplitter, Reader bufferedReader) throws IOException {
+public class CsvReadToList {
 
+    //Reading CSV file into Array List
+    public static List<PersonalDetails> readCsvToArray(Reader bufferedReader) throws IOException {
+
+        String commaSplitter = ",";
         List<PersonalDetails> profileList = new ArrayList<>();  //Array List to hold data
         String line = " ";
 
@@ -24,15 +26,16 @@ public class CsvReader {
 
             String[] personInfo = line.split(commaSplitter);
 
-            PersonalDetails returnedPersonBuilder = personBuilder(personInfo); //creating person object to add to profileList
+            PersonalDetails returnedProfileBuilder = StringArrayToProfileObject(personInfo); //creating person object to add to profileList
 
-            profileList.add(returnedPersonBuilder); //adding to person List
+            //Add each object to ProfileList
+            profileList.add(returnedProfileBuilder); //adding to person List
         }
         return profileList;
     }
 
     //Creating person Object
-    public static PersonalDetails personBuilder(String[] personInfo) {
+    public static PersonalDetails StringArrayToProfileObject(String[] personInfo) {
         PersonalDetails profile = null;
 
         if (personInfo.length == 11) {

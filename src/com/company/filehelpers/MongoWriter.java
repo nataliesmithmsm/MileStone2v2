@@ -8,7 +8,7 @@ import java.util.List;
 
 public class MongoWriter {
 
-    public void insertDocument(List<PersonalDetails> profileList)  {  //ArrayList profileList, PersonalDetails person1
+    public void insertDocumentToMongo(List<PersonalDetails> profileList)  {  //ArrayList profileList, PersonalDetails person1
 
         //Connection to Mongodb, database and Collection
         MongoCollection<BasicDBObject> collection = ConnectionToMongo.connection();  //returns collection

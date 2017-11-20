@@ -39,5 +39,6 @@ public class QueryCarMake {
 
         System.out.println("");
         System.out.println("There are " + carMakeList.size() + " matching profiles out of " + collection.count());
+        System.out.println("");
     }
 }

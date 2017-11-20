@@ -35,5 +35,6 @@ public class QueryDisplayLast10 {
 
         System.out.println("");
         System.out.println("There are " + display10List.size() + " matching profiles out of " + collection.count());
+        System.out.println("");
     }
 }
