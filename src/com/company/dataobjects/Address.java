@@ -1,45 +1,47 @@
 package com.company.dataobjects;
 
+import org.codehaus.jackson.annotate.JsonProperty;
+
 public class Address {
 
-    private int houseNumber;
-    private String street;
-    private String town;
-    private String city;
-    private String postcode;
+    private int HouseNumber;
+    private String Street;
+    private String Town;
+    private String City;
+    private String Postcode;
 
     public Address() { }
 
-    public Address(int houseNumber, String street, String town, String city, String postcode)
+    public Address(int HouseNumber, String Street, String Town, String City, String Postcode)
     {
-        setHouseNumber(houseNumber);
-        setStreet(street);
-        setTown(town);
-        setCity(city);
-        setPostcode(postcode);
+        setHouseNumber(HouseNumber);
+        setStreet(Street);
+        setTown(Town);
+        setCity(City);
+        setPostcode(Postcode);
     }
 
     public int getHouseNumber() {
-        return houseNumber;
+        return HouseNumber;
     }
 
-    public void setHouseNumber(int houseNumber) { this.houseNumber = houseNumber;  }
+    public void setHouseNumber(int houseNumber) { this.HouseNumber = houseNumber;  }
 
-    public String getStreet() { return street; }
+    public String getStreet() { return Street; }
 
-    public void setStreet(String street) { this.street = street; }
+    public void setStreet(String street) { this.Street = street; }
 
-    public String getTown() { return town; }
+    public String getTown() { return Town; }
 
-    public void setTown(String town) { this.town = town; }
+    public void setTown(String town) { this.Town = town; }
 
-    public String getCity() { return city;  }
+    public String getCity() { return City;  }
 
-    public void setCity(String city) { this.city = city; }
+    public void setCity(String city) { this.City = city; }
 
-    public String getPostcode() { return postcode;  }
+    public String getPostcode() { return Postcode;  }
 
-    public void setPostcode(String postcode) { this.postcode = postcode;  }
+    public void setPostcode(String postcode) { this.Postcode = postcode;  }
 
 
     @Override

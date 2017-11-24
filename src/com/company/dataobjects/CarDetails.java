@@ -1,7 +1,10 @@
 package com.company.dataobjects;
 
+import org.codehaus.jackson.annotate.JsonProperty;
+
 public class CarDetails {
 
+    @JsonProperty("CarDetails")
     private String carRegistration;
     private String carMake;
     private String carModel;

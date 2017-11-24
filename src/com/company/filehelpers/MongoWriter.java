@@ -1,7 +1,7 @@
 package com.company.filehelpers;
 import com.company.Mongo.ConnectionToMongo;
 import com.company.dataobjects.PersonalDetails;
-import com.mongodb.*;
+import com.mongodb.BasicDBObject;
 import com.mongodb.client.MongoCollection;
 
 import java.util.List;
@@ -16,24 +16,27 @@ public class MongoWriter {
         for (PersonalDetails profile : profileList)  {
 
             BasicDBObject profileDBObject = new BasicDBObject();
-
             profileDBObject.put("FirstName", profile.getFirstName());
             profileDBObject.put("Surname", profile.getSurname());
 
-            profileDBObject.put("HouseNumber", profile.getAddress().getHouseNumber());
-            profileDBObject.put("Street", profile.getAddress().getStreet());
-            profileDBObject.put("Town", profile.getAddress().getTown());
-            profileDBObject.put("City", profile.getAddress().getCity());
-            profileDBObject.put("PostCode", profile.getAddress().getPostcode());
+            BasicDBObject address = new BasicDBObject();
+            address.put("HouseNumber", profile.getAddress().getHouseNumber());
+            address.put("Street",profile.getAddress().getStreet());
+            address.put("Town", profile.getAddress().getTown());
+            address.put("City", profile.getAddress().getCity());
+            address.put("PostCode", profile.getAddress().getPostcode());
 
-            profileDBObject.put("CarRegistration", profile.getCarDetails().getCarRegistration());
-            profileDBObject.put("CarMake", profile.getCarDetails().getCarMake());
-            profileDBObject.put("CarModel", profile.getCarDetails().getCarModel());
-            profileDBObject.put("EngineSize", profile.getCarDetails().getEngineSize());
+            BasicDBObject carDetails = new BasicDBObject();
+            carDetails.put("CarRegistration", profile.getCarDetails().getCarRegistration());
+            carDetails.put("CarMake", profile.getCarDetails().getCarMake());
+            carDetails.put("CarModel",profile.getCarDetails().getCarModel());
+            carDetails.put("EngineSize", profile.getCarDetails().getEngineSize());
+
+            profileDBObject.put("Address", address);
+            profileDBObject.put("Car Details", carDetails);
 
             //inserting object into Mongodb table
             collection.insertOne(profileDBObject);
-
         }
 
     }

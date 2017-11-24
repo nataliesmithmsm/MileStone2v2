@@ -3,6 +3,9 @@ package com.company.filehelpers;
 import com.company.dataobjects.Address;
 import com.company.dataobjects.CarDetails;
 import com.company.dataobjects.PersonalDetails;
+import org.codehaus.jackson.JsonNode;
+import org.codehaus.jackson.map.ObjectMapper;
+
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -24,12 +27,22 @@ public class CsvReadToList {
 
         while ((line = reader.readLine()) != null) {
 
+//            ObjectMapper mapper = new ObjectMapper();
+//            JsonNode rootNode = mapper.readTree(line);
+//
+//            PersonalDetails profile = mapper.readValue(rootNode, PersonalDetails.class);
+//             profileList.add(profile);
+//
+//             System.out.println(rootNode);
+
             String[] personInfo = line.split(commaSplitter);
 
             PersonalDetails returnedProfileBuilder = StringArrayToProfileObject(personInfo); //creating person object to add to profileList
 
             //Add each object to ProfileList
             profileList.add(returnedProfileBuilder); //adding to person List
+
+
         }
         return profileList;
     }
