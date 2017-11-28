@@ -24,7 +24,7 @@ public class MongoWriter {
             address.put("Street",profile.getAddress().getStreet());
             address.put("Town", profile.getAddress().getTown());
             address.put("City", profile.getAddress().getCity());
-            address.put("PostCode", profile.getAddress().getPostcode());
+            address.put("PostCode", profile.getAddress().getPostCode());
 
             BasicDBObject carDetails = new BasicDBObject();
             carDetails.put("CarRegistration", profile.getCarDetails().getCarRegistration());
@@ -33,7 +33,7 @@ public class MongoWriter {
             carDetails.put("EngineSize", profile.getCarDetails().getEngineSize());
 
             profileDBObject.put("Address", address);
-            profileDBObject.put("Car Details", carDetails);
+            profileDBObject.put("CarDetails", carDetails);
 
             //inserting object into Mongodb table
             collection.insertOne(profileDBObject);

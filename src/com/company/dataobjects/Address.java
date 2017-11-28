@@ -4,11 +4,20 @@ import org.codehaus.jackson.annotate.JsonProperty;
 
 public class Address {
 
+    @JsonProperty("HouseNumber")
     private int HouseNumber;
+
+    @JsonProperty("Street")
     private String Street;
+
+    @JsonProperty("Town")
     private String Town;
+
+    @JsonProperty("City")
     private String City;
-    private String Postcode;
+
+    @JsonProperty("PostCode")
+    private String PostCode;
 
     public Address() { }
 
@@ -18,7 +27,7 @@ public class Address {
         setStreet(Street);
         setTown(Town);
         setCity(City);
-        setPostcode(Postcode);
+        setPostCode(Postcode);
     }
 
     public int getHouseNumber() {
@@ -39,15 +48,15 @@ public class Address {
 
     public void setCity(String city) { this.City = city; }
 
-    public String getPostcode() { return Postcode;  }
+    public String getPostCode() { return PostCode;  }
 
-    public void setPostcode(String postcode) { this.Postcode = postcode;  }
+    public void setPostCode(String postcode) { this.PostCode = postcode;  }
 
 
     @Override
     public  String toString()
     {
-        return getHouseNumber() + " " + getStreet() + " " + getTown() + " " + getCity() + " " + getPostcode();
+        return getHouseNumber() + " " + getStreet() + " " + getTown() + " " + getCity() + " " + getPostCode();
 
     }
 }

@@ -6,35 +6,32 @@ import com.company.dataobjects.PersonalDetails;
 import com.mongodb.*;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
+import org.codehaus.jackson.map.ObjectMapper;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class QueryDisplayLast10 {
 
-    public void displayLast10Profiles(){
+    public List <PersonalDetails>  displayLast10Profiles() throws IOException {
 
-        //Connection to Mongodb
-        MongoCollection<BasicDBObject> collection = ConnectionToMongo.connection();  //returns collection
-
+        ObjectMapper mapper = new ObjectMapper();
         List<PersonalDetails> display10List = new ArrayList<>(); //new list to store items
 
-        //Query
-        MongoCursor<BasicDBObject> cursor = collection.find().sort(new BasicDBObject("$natural", -1)).limit(10).iterator();    //sorts list in descending order and reads first 10 items
+        MongoCollection<BasicDBObject> allProfiles = ConnectionToMongo.connection();  //returns collection
+        MongoCursor<BasicDBObject> cursor = allProfiles.find().sort(new BasicDBObject("$natural", -1)).limit(10).iterator();    //sorts list in descending order and reads first 10 items
 
-        //Find matching profiles
         while (cursor.hasNext())
         {
-            BasicDBObject carInsuranceObject = cursor.next();
+            String last10items = cursor.next().toString();
 
-            PersonalDetails personalDetails = ConvertingBsonToJava.convertingObject(carInsuranceObject); //convert from BSON to Java
+            mapper.readValue(last10items, PersonalDetails.class);
 
-            display10List.add(personalDetails);
-            System.out.println(personalDetails);
+            System.out.println(last10items);
         }
 
-        System.out.println("");
-        System.out.println("There are " + display10List.size() + " matching profiles out of " + collection.count());
-        System.out.println("");
+        return display10List;
+
     }
 }

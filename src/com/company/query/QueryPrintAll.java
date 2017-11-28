@@ -1,42 +1,38 @@
 package com.company.query;
 
 import com.company.Mongo.ConnectionToMongo;
-import com.company.Mongo.ConvertingBsonToJava;
 import com.company.dataobjects.PersonalDetails;
 import com.mongodb.*;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
+import org.codehaus.jackson.map.ObjectMapper;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class QueryPrintAll {
 
-    public void printAllDocuments() {
+    public List<PersonalDetails> printAllDocuments() throws IOException {
 
-        //connection to MongoDB Collection
-        MongoCollection<BasicDBObject> collection = ConnectionToMongo.connection();
-
-        //ArrayList to store documents
+        ObjectMapper mapper = new ObjectMapper();
         List <PersonalDetails> profileList = new ArrayList<>();
 
-        //Query Find all documents in Collection
-        MongoCursor<BasicDBObject> cursor = collection.find().iterator();  //DBCursor cursor = collection.find();
+        MongoCollection<BasicDBObject> allProfiles = ConnectionToMongo.connection();
+        MongoCursor<BasicDBObject> cursor = allProfiles.find().iterator();
 
         while (cursor.hasNext()) {
+            String profiles = cursor.next().toString();
+            profileList.add(getAllProfiles(mapper, profiles.toString()));
 
-            BasicDBObject profileObject = cursor.next(); //Creating BasicDBObject
-
-            //converting Mongo Object (BSON) to java object
-            PersonalDetails personalDetails = ConvertingBsonToJava.convertingObject(profileObject);
-
-            //adding java object to list
-            profileList.add(personalDetails);
-            System.out.println(personalDetails);
+            System.out.println(profiles);
         }
 
-        System.out.println("");
-        System.out.println("Total amount in collection " + collection.count());
-        System.out.println("");
+        return profileList;
     }
+
+    private PersonalDetails getAllProfiles(ObjectMapper mapper, String profiles) throws IOException {
+        return mapper.readValue(profiles, PersonalDetails.class);
+    }
+
 }

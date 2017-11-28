@@ -4,10 +4,16 @@ import org.codehaus.jackson.annotate.JsonProperty;
 
 public class CarDetails {
 
-    @JsonProperty("CarDetails")
+    @JsonProperty("CarRegistration")
     private String carRegistration;
+
+    @JsonProperty("CarMake")
     private String carMake;
+
+    @JsonProperty("CarModel")
     private String carModel;
+
+    @JsonProperty("EngineSize")
     private double engineSize;
 
     public CarDetails() {}

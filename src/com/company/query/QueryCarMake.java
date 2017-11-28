@@ -1,5 +1,6 @@
 package com.company.query;
 
+import com.company.Mongo.ConnectionToMongo;
 import com.company.dataobjects.PersonalDetails;
 import com.mongodb.BasicDBObject;
 import com.mongodb.BasicDBObjectBuilder;
@@ -21,16 +22,16 @@ public class QueryCarMake {
         List<PersonalDetails> personsWithBMW = new ArrayList<>();
         ObjectMapper mapper = new ObjectMapper();
 
-        //mapper.configure(DeserializationConfig.Feature.FAIL_ON_UNKNOWN_PROPERTIES,false);
+        mapper.configure(DeserializationConfig.Feature.FAIL_ON_UNKNOWN_PROPERTIES,false);
 
-        MongoCollection<BasicDBObject> allProfiles = getAllProfiles();
+        MongoCollection<BasicDBObject> allProfiles = ConnectionToMongo.connection();
         MongoCursor<BasicDBObject> personsWithBMWCar = findPersonsWithBMWCar(allProfiles);
 
         while (personsWithBMWCar.hasNext()) {
             String personWithBMW = personsWithBMWCar.next().toString();
             personsWithBMW.add(getPersonWithBMW(mapper, personWithBMW));
 
-            System.out.println(personsWithBMW); //Delete After Test
+            System.out.println(personWithBMW); //Delete After Test
         }
 
         return personsWithBMW;
@@ -49,16 +50,7 @@ public class QueryCarMake {
     }
 
     private BasicDBObject queryByCarMake() {
-        return (BasicDBObject) new BasicDBObjectBuilder().add("CarMake", "BMW").get();
+        return (BasicDBObject) new BasicDBObjectBuilder().add("CarDetails.CarMake", "BMW").get();
     }
 
-    private MongoCollection<BasicDBObject> getAllProfiles() {
-        return getCarInsuranceDatabase().getCollection("Personal_Details", BasicDBObject.class);
-    }
-
-    private MongoDatabase getCarInsuranceDatabase() {
-        MongoClient mongoClient = new MongoClient("localhost", 27017);
-
-        return mongoClient.getDatabase("Car_Insurance_Details");
-    }
 }

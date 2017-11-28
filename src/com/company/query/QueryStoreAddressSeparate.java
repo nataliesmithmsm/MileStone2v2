@@ -5,6 +5,9 @@ import com.mongodb.*;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
+import com.oracle.tools.packager.Log;
+import org.bson.Document;
+import sun.awt.SunHints;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,19 +29,21 @@ public class QueryStoreAddressSeparate {
         {
             BasicDBObject carInsuranceObject = cursor.next();
 
-            String houseNumber = carInsuranceObject.getString("HouseNumber");  //Reading only address Feilds from database
-            String street = carInsuranceObject.getString("Street");
-            String town = carInsuranceObject.getString("Town");
-            String city = carInsuranceObject.getString("City");
-            String postcode = carInsuranceObject.getString("PostCode");
+            DBObject getAddresses = (BasicDBObject) carInsuranceObject.get("Address");
+
+            Integer houseNumber = (Integer) getAddresses.get("HouseNumber");
+            String street = (String) getAddresses.get("Street");
+            String town = (String) getAddresses.get("Town");
+            String city = (String) getAddresses.get("City");
+            String postcode = (String) getAddresses.get("PostCode");
 
             Address address = new Address();
 
-            address.setHouseNumber(Integer.parseInt(houseNumber));  //storing address as java object
+            address.setHouseNumber(houseNumber);  //storing address as java object
             address.setStreet(street);
             address.setTown(town);
             address.setCity(city);
-            address.setPostcode(postcode);
+            address.setPostCode(postcode);
 
             //Add each item to Address List
             addressList.add(address);
@@ -60,7 +65,7 @@ public class QueryStoreAddressSeparate {
             AddressDBObject.put("Street", address.getStreet());
             AddressDBObject.put("Town", address.getTown());
             AddressDBObject.put("City", address.getCity());
-            AddressDBObject.put("PostCode", address.getPostcode());
+            AddressDBObject.put("PostCode", address.getPostCode());
 
             addressCollection.insertOne(AddressDBObject);
         }

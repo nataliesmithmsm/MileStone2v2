@@ -33,7 +33,7 @@ public class ConvertingBsonToJava {
         address.setStreet(street);
         address.setTown(town);
         address.setCity(city);
-        address.setPostcode(postcode);
+        address.setPostCode(postcode);
         person.setAddress(address);
 
         CarDetails carDetails = new CarDetails();

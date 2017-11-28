@@ -6,43 +6,52 @@ import com.company.dataobjects.PersonalDetails;
 import com.mongodb.*;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
+import com.mongodb.client.MongoDatabase;
+import org.codehaus.jackson.map.ObjectMapper;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
 
 public class QueryPostCodes {
 
-    public void searchForPostcodes()
-    {
-        //Connection to Mongodb, database and Collection
-        MongoCollection<BasicDBObject> collection = ConnectionToMongo.connection();  //returns collection
+    public List<PersonalDetails> searchForPostcodes() throws IOException {
+        List<PersonalDetails> profilesWithSK11Postcodes = new ArrayList<>();
+        ObjectMapper mapper = new ObjectMapper();
 
-        //Create List to hold objects
-        List<PersonalDetails> postcodeList = new ArrayList<>();
-
-        //QueryObject
-        BasicDBObject query = new BasicDBObject();
-
-        //Query
-        String pattern1 = ".*" + "SK11" + ".*";
-        Pattern stringPattern = Pattern.compile(pattern1);
-        query.put("PostCode", stringPattern);
-
-        MongoCursor<BasicDBObject> cursor = collection.find(query).iterator();
+        MongoCollection<BasicDBObject> allProfiles = ConnectionToMongo.connection();  //returns collection
+        MongoCursor<BasicDBObject> cursor = findProfilesWithSK11(allProfiles);
 
         while (cursor.hasNext()) {
-            BasicDBObject Profile = cursor.next();
+            String profilesWithSK11 = cursor.next().toString();
+            profilesWithSK11Postcodes.add(getProfilesWithSK11(mapper, profilesWithSK11.toString()));
 
-            //converting Mongo Object (BSON) to java object
-            PersonalDetails personalDetails = ConvertingBsonToJava.convertingObject(Profile);
-
-            postcodeList.add(personalDetails);
-            System.out.println(personalDetails);
+            System.out.println(profilesWithSK11);
         }
-
-        System.out.println("");
-        System.out.println("There are " + postcodeList.size() + " matching profiles out of " + collection.count());
-        System.out.println("");
+        return profilesWithSK11Postcodes;
     }
+
+
+    private PersonalDetails getProfilesWithSK11(ObjectMapper mapper, String profileWithSK11) throws IOException {
+        return mapper.readValue(profileWithSK11, PersonalDetails.class);
+    }
+
+    private MongoCursor<BasicDBObject> findProfilesWithSK11(MongoCollection<BasicDBObject> personDetails)
+    {
+        return personDetails.find(filterByPostcode()).iterator();
+    }
+
+    private BasicDBObject filterByPostcode()
+    {
+        //Query
+        //BasicDBObject query = new BasicDBObject();
+        String pattern1 = ".*" + "SK11" + ".*";
+        Pattern stringPattern = Pattern.compile(pattern1);
+        return (BasicDBObject) new BasicDBObjectBuilder().add("Address.PostCode", stringPattern).get();
+    }
+
+
+
+
 }

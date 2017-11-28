@@ -29,7 +29,7 @@ public class TestReadingInCsv {
                 () -> assertEquals(personalDetails.getAddress().getStreet(), testPerson.getAddress().getStreet()),
                 () -> assertEquals(personalDetails.getAddress().getTown(), testPerson.getAddress().getTown()),
                 () -> assertEquals(personalDetails.getAddress().getCity(), testPerson.getAddress().getCity()),
-                () -> assertEquals(personalDetails.getAddress().getPostcode(), testPerson.getAddress().getPostcode()),
+                () -> assertEquals(personalDetails.getAddress().getPostCode(), testPerson.getAddress().getPostCode()),
 
                 () -> assertEquals(personalDetails.getCarDetails().getCarRegistration(), testPerson.getCarDetails().getCarRegistration()),
                 () -> assertEquals(personalDetails.getCarDetails().getCarMake(), testPerson.getCarDetails().getCarMake()),
