@@ -1,3 +1,6 @@
 MileStone2.iml
 .idea
+.iws
 out/
+workspace.xml
+tasks.xml
